@@ -1,0 +1,60 @@
+{
+  "name": "@jimmycode/oauth2-profile",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "oauth2",
+    "oauth2-profile",
+    "social-profile",
+    "social-network",
+    "facebook"
+  ],
+  "author": "JimmyCode Social <hi@jimmycode.com>",
+  "contributors": [
+    {
+      "name": "Alberto Menendez Romero",
+      "url": "https://www.linkedin.com/in/albertomr86/"
+    }
+  ],
+  "engine": {
+    "node": ">=8.0"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "test": "jasmine-ts --config=jasmine.json",
+    "coverage": "jasmine-ts --config=jasmine.json && nyc report"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "branches": 100,
+    "functions": 100,
+    "statements": 100,
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "spec/**/*.spec.ts"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  },
+  "dependencies": {
+    "oauth": "^0.9.15"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.3.12",
+    "@types/node": "^11.11.6",
+    "@types/oauth": "^0.9.1",
+    "coveralls": "^3.0.3",
+    "jasmine": "^3.3.1",
+    "jasmine-ts": "^0.3.0",
+    "nyc": "^13.3.0",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.3.4000"
+  }
+}
